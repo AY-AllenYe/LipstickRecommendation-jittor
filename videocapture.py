@@ -17,7 +17,7 @@ def LoadModels(model_path):
         ('nose',(27,36)),
         ('jaw',(0,17))
     ])
-    return detector, criticPoints, landmarks
+    return detector, criticPoints, landmarks 
 
 # Draw rectangle box to the whole face
 def drawRectangle(detected, frame, criticPoints, organ_range):
@@ -69,21 +69,21 @@ def drawCriticPoints(detected, frame, criticPoints, landmarks, organ_range=None)
                            radius=2,color=(0,255,0),thickness=-1)
     return frame
 
-# Real-time video capture
-def detect_time(detector, criticPoints, landmarks, organ_range=None):
-    cap=cv2.VideoCapture(0)
-    while cap.isOpened():
-        ret,frame=cap.read()
-        detected = detector(frame)
-        frame = drawRectangle(detected, frame, criticPoints, organ_range)
-        frame = drawCriticPoints(detected, frame, criticPoints, landmarks, organ_range)
-        cv2.imshow('frame', frame)
-        key=cv2.waitKey(1)
-        if key == 27:
-            break
-    cap.release()
-    cv2.destroyAllWindows()
-    return
+# # Real-time video capture
+# def detect_time(detector, criticPoints, landmarks, organ_range=None):
+#     cap=cv2.VideoCapture(0)
+#     while cap.isOpened():
+#         ret,frame=cap.read()
+#         detected = detector(frame)
+#         frame = drawRectangle(detected, frame, criticPoints, organ_range)
+#         frame = drawCriticPoints(detected, frame, criticPoints, landmarks, organ_range)
+#         cv2.imshow('frame', frame)
+#         key=cv2.waitKey(1)
+#         if key == 27:
+#             break
+#     cap.release()
+#     cv2.destroyAllWindows()
+#     return
 
 # if __name__ == '__main__':
 #     model_path = 'models\pretrained\shape_predictor_68_face_landmarks.dat'
