@@ -1,9 +1,11 @@
 # Lipstick-Recommendation
 **AY-AllenYe @ HDU**
 
+(English|[简体中文](README_zh.md))
+
 Wish this project helps you. And your Star is really helpful.
 
-This projects is aiming to provide several similar lipsticks (mainly in colors) with the user updates.
+This projects is aiming to provide several similar lipsticks (mainly in colors) with the user uploads.
 
 ## version 1.x
 
@@ -43,9 +45,9 @@ This projects is aiming to provide several similar lipsticks (mainly in colors) 
 
 ​	Batch or single sample is supported. 
 
-​	To classify batch samples, users need a folder to store the JPG solid color images (PNG images is okay, but have to change one piece of code.)
-
 ​	To classify single sample, users need to type HEX color in the command.
+
+​	To classify batch samples, users need a folder to store the JPG solid color images (PNG images is okay, but have to change one piece of code in [infer.py](infer.py) ).
 
 ```
 the file tree
@@ -73,14 +75,14 @@ the file tree
 ```
 
 ### Bash
-GUI Test
+​	GUI Test
 ```
 cd
 
-python gui.py
+python App.py
 ```
 
-Algorithm Test
+​	Algorithm Test
 ```
 cd
 python dataset_proceed.py
@@ -114,9 +116,8 @@ and others.
 
     The application is partly done. The author will not update as frequently as this month, but will not abandon this project in the future.
 
-
 **TODO**
-    
+
     Basic functions:
         1.Function: Recognize image user updated, and fetch the color automatically. However I haven't decided to rule the updated images(Lipsticks? Portrait? or others?)
         2.Function: Better method of recommendation and list recommended items' information of its online shopping website.
@@ -211,7 +212,7 @@ and others.
 **Goals (v1.1.0)**
 
     1.Function: Recommend other items in same cluster.
-    2.Fix bugs
+    2.Fix bugs.
 
 **TODO (v1.1.0)**
 
@@ -222,7 +223,7 @@ and others.
 **Goals (v1.0.1)**
 
     1.Optimize the file tree structure (Move and Rename several files)
-    2.Fix bugs
+    2.Fix bugs.
 
 **TODO (v1.0.1)**
 
@@ -246,4 +247,3 @@ and others.
     6.UI and repository, which can easily interact.
     7.Function: Recommend other items in same cluster, list its information or online shopping website.
     8.Function(Maybe): Virtual dress-on if input real-time video of human face. 
-    
