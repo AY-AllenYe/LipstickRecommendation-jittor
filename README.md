@@ -73,7 +73,14 @@ the file tree
 ```
 
 ### Bash
+GUI Test
+```
+cd
 
+python gui.py
+```
+
+Algorithm Test
 ```
 cd
 python dataset_proceed.py
